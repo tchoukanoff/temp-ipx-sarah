@@ -1,0 +1,60 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleIpx800sonde" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleIpx800sonde" scope="public">
+    <example>Sarah, quelle est la température</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Sarah</item>
+     <one-of>  
+	  <item>Quel est</item>
+      <item>De combien est</item>
+       <item>donne moi</item>
+       <item>A combien est</item>
+      <item>il fait combien</item>
+    </one-of> 
+    <one-of>
+		<item>la température
+			<tag>
+			out.action.actionModule="temperature";
+        </tag>
+      </item>	
+		<item>dans la piscine
+			<tag>
+        out.action.actionModule="temperature";
+			</tag><tag>out.action._attributes.tts ="je me renseigne"</tag>
+		</item>	
+		<item>de la piscine
+			<tag>
+			out.action.actionModule="temperature";
+			</tag><tag>out.action._attributes.tts ="je me renseigne"</tag>
+      </item>
+      <item>la piscine
+			<tag>
+			out.action.actionModule="temperature";
+			</tag><tag>out.action._attributes.tts ="je me renseigne"</tag>
+		</item>	
+		<item>de degré
+			<tag>
+			out.action.actionModule="temperature";
+			</tag>
+		</item>		
+		<item>l'humidité
+			<tag>
+			out.action.actionModule="humidite";
+			</tag>
+		</item>			
+		<item>le taux d'humidité
+			<tag>
+			out.action.actionModule="humidite";
+			</tag>
+		</item>			
+		<item>d'humidité
+			<tag>
+			out.action.actionModule="humidite";
+			</tag>
+		</item>	
+	 
+    </one-of>
+	
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/ipx800sonde";</tag>
+  </rule>
+</grammar>
+              
