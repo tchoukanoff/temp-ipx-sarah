@@ -8,8 +8,7 @@
       <item>De combien est</item>
        <item>donne moi</item>
        <item>A combien est</item>
-      <item>il fait combien</item>
-    </one-of> 
+      <item>il fait combien</item> 
     <one-of>
 		<item>la température
 			<tag>
